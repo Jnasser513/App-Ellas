@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_gap"
+        android:backgroundTint="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/blog_style">
+
+            <TextView
+                android:id="@+id/item_blog_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/minimum_gap"
+                tools:text="Titulo"
+                app:layout_constraintEnd_toStartOf="@id/item_blog_image"
+                android:textColor="@color/primary_color"
+                android:textSize="24sp"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="@dimen/default_gap"
+                android:fontFamily="@font/poppinsbold" />
+
+            <TextView
+                android:id="@+id/item_blog_subtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Subtitulo"
+                android:textColor="@color/primary_color"
+                android:textSize="20sp"
+                android:layout_marginEnd="@dimen/minimum_gap"
+                app:layout_constraintEnd_toStartOf="@id/item_blog_image"
+                android:layout_marginTop="-8dp"
+                android:layout_marginStart="@dimen/default_gap"
+                app:layout_constraintTop_toBottomOf="@id/item_blog_title"
+                android:fontFamily="@font/poppinsbold" />
+
+            <TextView
+                android:id="@+id/item_blog_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Prueba descripcion"
+                android:textColor="@color/secondary_color"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="18sp"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginEnd="@dimen/minimum_gap"
+                android:layout_marginHorizontal="@dimen/default_gap"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/item_blog_image"
+                app:layout_constraintTop_toBottomOf="@id/item_blog_subtitle"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/item_blog_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:riv_corner_radius="10dp"
+                app:riv_border_color="@color/secondary_color"
+                app:riv_border_width="1dp"
+                android:layout_marginEnd="@dimen/minimum_gap"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
